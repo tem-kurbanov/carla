@@ -17,7 +17,8 @@ FBXSDK_URL=https://www.autodesk.com/content/dam/autodesk/www/adn/fbx/2020-0-1/${
 
 if [ ! -d "${FBX2OBJ_DEP_FOLDER}" ]; then
   log "Downloading FBX SDK..."
-  wget -c "${FBXSDK_URL}" -P "${CARLA_DOCKER_UTILS_FOLDER}" --user-agent="Mozilla"
+  # wget -c "${FBXSDK_URL}" -P "${CARLA_DOCKER_UTILS_FOLDER}" --user-agent="Mozilla"
+  mv /home/carla/fbx202001_fbxsdk_linux.tar.gz "${CARLA_DOCKER_UTILS_FOLDER}"
 
   echo "Unpacking..."
   mkdir -p "${FBX2OBJ_DEP_FOLDER}"
